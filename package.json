@@ -3,6 +3,14 @@
     "description": "Lint against harmful usages of Atlassian's web APIs.",
     "version": "0.1.0",
     "license": "AGPL-3.0-only",
+    "author": "Sam A. Horvath-Hunt <hello@samhh.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/samhh/eslint-plugin-atlassian-webapis"
+    },
+    "homepage": "https://github.com/samhh/eslint-plugin-atlassian-webapis",
+    "bugs": "https://github.com/samhh/eslint-plugin-atlassian-webapis/issues",
+    "keywords": ["eslint", "atlassian", "api"],
     "main": "lib/index.js",
     "files": ["lib/"],
     "scripts": {
