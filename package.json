@@ -1,0 +1,27 @@
+{
+    "name": "eslint-plugin-atlassian-webapis",
+    "description": "Lint against harmful usages of Atlassian's web APIs.",
+    "version": "0.1.0",
+    "license": "AGPL-3.0-only",
+    "main": "lib/index.js",
+    "files": ["lib/"],
+    "scripts": {
+        "dev": "tsc -w",
+        "build": "tsc",
+        "typecheck": "tsc --noEmit",
+        "typecheck-dev": "tsc -w --noEmit",
+        "test": "ts-node src/**/*.test.ts",
+        "clean": "rm -rf lib",
+        "prepack": "yarn run build",
+        "postpack": "yarn run clean"
+    },
+    "devDependencies": {
+        "@types/eslint": "^7.0.0",
+        "eslint": "^7.0.0",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.3"
+    },
+    "peerDependencies": {
+        "eslint": "^7.0.0"
+    }
+}
