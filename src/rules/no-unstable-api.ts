@@ -1,8 +1,12 @@
 import { Rule } from 'eslint';
 import { Node } from 'estree';
 
-export const messages = {
-    usedBetaRestApi: 'Avoid using the V3 Jira Rest API as it\'s in beta',
+export enum Message {
+    UsedBetaRestApi = 'used-beta-rest-api',
+}
+
+export const messages: Record<Message, string> = {
+    [Message.UsedBetaRestApi]: 'Avoid using the V3 Jira Rest API as it\'s in beta',
 };
 
 const rule: Rule.RuleModule = {
@@ -16,7 +20,7 @@ const rule: Rule.RuleModule = {
         // matching any path delimiter as opposed to only forward-slashes
         'Literal[value=/rest.api.3/]': (node: Node) => ctx.report({
             node,
-            messageId: 'usedBetaRestApi',
+            messageId: Message.UsedBetaRestApi,
         }),
     }),
 };
