@@ -18,7 +18,7 @@ const rule: Rule.RuleModule = {
         // As far as I can tell esquery doesn't support escaping
         // forward-slashes in attribute regex matchers, hence technically
         // matching any path delimiter as opposed to only forward-slashes
-        'Literal[value=/rest.api.3/]': (node: Node) => ctx.report({
+        'Literal[value=/rest.api.3/], TemplateElement[value.raw=/rest.api.3/]': (node: Node) => ctx.report({
             node,
             messageId: Message.UsedBetaRestApi,
         }),
