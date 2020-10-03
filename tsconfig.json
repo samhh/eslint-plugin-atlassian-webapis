@@ -6,7 +6,6 @@
         "strict": true,
         "outDir": "./lib/"
     },
-    "include": ["src/**/*.ts"],
-    "exclude": ["**/*.test.ts"]
+    "include": ["src/**/*.ts"]
 }
 
